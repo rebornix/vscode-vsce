@@ -151,9 +151,9 @@ export function publish(options: IPublishOptions = {}): Promise<any> {
 	}
 
 	return promise.then(({ manifest, packagePath }) => {
-		if (manifest.enableProposedApi) {
-			throw new Error('Extensions using proposed API (enableProposedApi: true) can\'t be published to the Marketplace');
-		}
+// 		if (manifest.enableProposedApi) {
+// 			throw new Error('Extensions using proposed API (enableProposedApi: true) can\'t be published to the Marketplace');
+// 		}
 
 		const patPromise = options.pat
 			? Promise.resolve(options.pat)
